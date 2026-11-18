@@ -8,10 +8,10 @@ console = Console()
 
 # 1. Dados de treinamento
 X = np.array([
-    [-1, 0.1, 0.4, 0.7],
-    [-1, 0.3, 0.7, 0.2],
-    [-1, 0.6, 0.9, 0.8],
-    [-1, 0.5, 0.7, 0.1]
+    [-1, 0.10, 0.40, 0.70],
+    [-1, 0.30, 0.70, 0.20],
+    [-1, 0.60, 0.90, 0.80],
+    [-1, 0.50, 0.70, 0.10]
 ])
 
 d = np.array([1, -1, -1, 1])
@@ -48,7 +48,7 @@ console.print(Panel(
 console.print(f"\n[bold]Treinamento concluído![/bold]")
 console.print(f"Épocas executadas: [cyan]{epoca}[/cyan]")
 console.print(f"Taxa de aprendizagem: {eta}")
-console.print(f"Pesos finais: {np.round(w, 4)}")
+console.print(f"Pesos finais: {np.round(w, 2)}")
 
 # 5. Resultados das amostras
 tabela = Table(title="CLASSIFICAÇÃO DAS AMOSTRAS")
@@ -132,7 +132,7 @@ while True:
         console.print(Panel(
             f"[bold]Entradas:[/bold] {x1:.2f}, {x2:.2f}, {x3:.2f}\n"
             f"[bold]Épocas de treinamento:[/bold] {epoca}\n"
-            f"[bold]Soma ponderada:[/bold] {u:.4f}\n"
+            f"[bold]Soma ponderada:[/bold] {u:.2f}\n"
             f"[bold]Saída do Perceptron:[/bold] {resultado}\n\n"
             f"[bold {cor}]CLASSIFICAÇÃO: {classe}[/bold {cor}]",
             title="RESULTADO DA CLASSIFICAÇÃO",
